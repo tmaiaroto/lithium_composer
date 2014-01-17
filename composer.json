@@ -1,0 +1,9 @@
+{
+    "config": {
+        "vendor-dir": "libraries"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "unionofrad/lithium": "dev-masterer"
+    }
+}
