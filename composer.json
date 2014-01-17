@@ -4,6 +4,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "unionofrad/lithium": "dev-masterer"
+        "unionofrad/lithium": "dev-master"
     }
 }
