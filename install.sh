@@ -3,6 +3,12 @@
 echo "Lithium Installer"
 echo "----------------------"
 echo ""
+
+echo "Getting the Lithium Framework from GitHub"
+echo ""
+exec git clone https://github.com/tmaiaroto/lithium_composer.git .
+echo ""
+
 echo "Setting application cache directories and permissions..."
 chmod -R 777 resources
 chmod -R 775 config/bootstrap/libraries
