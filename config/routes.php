@@ -2,7 +2,7 @@
 /**
  * Lithium: the most rad php framework
  *
- * @copyright     Copyright 2011, Union of RAD (http://union-of-rad.org)
+ * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
 
@@ -18,7 +18,46 @@
  */
 use lithium\net\http\Router;
 use lithium\core\Environment;
-use lithium\action\Dispatcher;
+
+/**
+ * With globalization enabled a localized route is configured by connecting a
+ * continuation route. Once the route has been connected, all the other
+ * application routes become localized and may now carry a locale.
+ *
+ * Requests to routes like `/en/posts/edit/1138` or `/fr/posts/edit/1138` will
+ * carry a locale, while `/posts/edit/1138` keeps on working as it did before.
+ */
+if ($locales = Environment::get('locales')) {
+	$template = '/{:locale:' . join('|', array_keys($locales)) . '}/{:args}';
+	Router::connect($template, array(), array('continue' => true));
+}
+
+/**
+ * Here, we are connecting `'/'` (the base path) to controller called `'Pages'`,
+ * its action called `view()`, and we pass a param to select the view file
+ * to use (in this case, `/views/pages/home.html.php`; see `app\controllers\PagesController`
+ * for details).
+ *
+ * @see app\controllers\PagesController
+ */
+Router::connect('/', 'Pages::view');
+
+/**
+ * Connect the rest of `PagesController`'s URLs. This will route URLs like `/pages/about` to
+ * `PagesController`, rendering `/views/pages/about.html.php` as a static page.
+ */
+Router::connect('/pages/{:args}', 'Pages::view');
+
+/**
+ * Add the testing routes. These routes are only connected in non-production environments, and allow
+ * browser-based access to the test suite for running unit and integration tests for the Lithium
+ * core, as well as your own application and any other loaded plugins or frameworks. Browse to
+ * [http://path/to/app/test](/test) to run tests.
+ */
+if (!Environment::is('production')) {
+	Router::connect('/test/{:args}', array('controller' => 'lithium\test\Controller'));
+	Router::connect('/test', array('controller' => 'lithium\test\Controller'));
+}
 
 /**
  * ### Database object routes
@@ -53,5 +92,6 @@ use lithium\action\Dispatcher;
  * In almost all cases, custom routes should be added above this one, since route-matching works in
  * a top-down fashion.
  */
-Router::connect("/{:controller}/{:action}/{:args}");
+Router::connect('/{:controller}/{:action}/{:args}');
+
 ?>
