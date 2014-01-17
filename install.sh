@@ -11,11 +11,9 @@ echo ""
 
 echo "Setting application cache directories and permissions..."
 chmod -R 777 resources
-chmod -R 775 config/bootstrap/libraries
-chmod -R 775 config/bootstrap/connections
 echo ""
 
-if ! type composer > /dev/null; then
+if ! type -p composer > /dev/null; then
 	composer install
 	else if [ -f "composer.phar" ]; then
 		php composer.phar install
