@@ -6,7 +6,7 @@ echo ""
 
 echo "Getting the Lithium Framework from GitHub"
 echo ""
-exec git clone https://github.com/tmaiaroto/lithium_composer.git "./"
+git clone https://github.com/tmaiaroto/lithium_composer.git .
 echo ""
 
 echo "Setting application cache directories and permissions..."
