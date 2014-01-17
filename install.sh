@@ -9,11 +9,7 @@ echo ""
 git clone https://github.com/tmaiaroto/lithium_composer.git .
 echo ""
 
-echo "Setting application cache directories and permissions..."
-chmod -R 777 resources
-echo ""
-
-if ! type -p composer > /dev/null; then
+if type -p composer >/dev/null 2>&1; then
 	composer install
 	else if [ -f "composer.phar" ]; then
 		php composer.phar install
@@ -26,7 +22,8 @@ if ! type -p composer > /dev/null; then
 fi
 
 echo ""
-echo "Creating a symlink to li3 for you..."
+echo "Setting cache directory permissions and creating a symlink to the li3 command for you..."
+chmod -R 777 resources
 chmod +x libraries/unionofrad/lithium/lithium/console/li3
 ln -s libraries/unionofrad/lithium/lithium/console/li3 li3
 alias li3='./li3'
