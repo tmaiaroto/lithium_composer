@@ -34,7 +34,8 @@ You'll notice there is a ```composer.json``` file that brings in the actual fram
 This configuration also sets the typical Composer ```vendor``` directory to ```libraries``` for 
 Lithium's own autoloader and convention.
 
-With this repository, you are all set to add new packages to the ```composer.json``` file.
+With this repository, you are all set to add new packages to the ```composer.json``` file, using 
+```composer require``` or manually editing it of course.
 
 ### Autoloader
 
