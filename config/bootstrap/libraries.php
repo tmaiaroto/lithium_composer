@@ -79,31 +79,31 @@ use lithium\core\Libraries;
  * request/response or dispatch classes, you can safely remove these.  Actually, you can safely
  * remove them anyway, they're just there to give slightly you better out-of-the-box performance.
  */
-require LITHIUM_LIBRARY_PATH . '/lithium/core/Object.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/core/StaticObject.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/Collection.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/collection/Filters.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/Inflector.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/String.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/core/Adaptable.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/core/Environment.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/Message.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Message.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Media.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Request.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Response.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Route.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/net/http/Router.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/action/Controller.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/action/Dispatcher.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/action/Request.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/action/Response.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/template/View.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/template/view/Renderer.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/template/view/Compiler.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/template/view/adapter/File.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/storage/Cache.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/core/Object.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/core/StaticObject.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/util/Collection.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/util/collection/Filters.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/util/Inflector.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/util/String.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/core/Adaptable.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/core/Environment.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/Message.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Message.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Media.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Request.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Response.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Route.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/net/http/Router.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/action/Controller.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/action/Dispatcher.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/action/Request.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/action/Response.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/template/View.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/template/view/Renderer.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/template/view/Compiler.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/template/view/adapter/File.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/storage/Cache.php';
+require LITHIUM_LIBRARY_PATH . '/unionofrad/lithium/lithium/storage/cache/adapter/Apc.php';
 
 /**
  * Add the Lithium core library.  This sets default paths and initializes the autoloader.  You
