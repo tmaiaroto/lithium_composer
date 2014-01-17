@@ -21,8 +21,9 @@ the following command:
 If you'd rather clone this repository yourself (from the terminal or otherwise) and manually 
 call the Composer command to install the dependencies (the actual framework) that's fine too. 
 
-You'll want to start off by cloning this repository and then running ```Composer install``` and 
-it will then read the Composer configuration file and fetch the actual framework for you.
+You'll want to start off by cloning this repository and then running ```php composer.phar install``` 
+or ```composer install``` if you've installed Composer via brew or something and it will then read 
+the Composer configuration file and fetch the actual framework for you.
 
 After that, you'll want to ensure your ```resources``` directory is ```chmod 777``` so it can 
 be written to by the web server and such for cache, etc. Then you'll be ready to go.
